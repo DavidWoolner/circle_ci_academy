@@ -1,0 +1,22 @@
+version: 2.1
+
+jobs:
+  say-hello:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run: echo "Hello from config.yml!"
+  say-hi:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run: echo "Just 'hi' from config.yml!"
+
+
+workflows:
+  hello_and_hi:
+    jobs:
+      - say_hello
+      - say_hi
