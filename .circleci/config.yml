@@ -18,5 +18,5 @@ jobs:
 workflows:
   hello_and_hi:
     jobs:
-      - say_hello
-      - say_hi
+      - say-hello
+      - say-hi
