@@ -13,10 +13,16 @@ jobs:
     steps:
       - checkout
       - run: echo "Hi, I've been edited! from config.yml!"
-
+  test-variable:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run: echo $SECRET_TEST
 
 workflows:
   hello_and_hi:
     jobs:
       - say-hello
       - say-hi
+      - test-variable
