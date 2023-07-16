@@ -12,7 +12,7 @@ jobs:
       - image: cimg/base:stable
     steps:
       - checkout
-      - run: echo "Just 'hi' from config.yml!"
+      - run: echo "Hi, I've been edited! from config.yml!"
 
 
 workflows:
