@@ -17,12 +17,13 @@ jobs:
     docker:
       - image: cimg/base:stable
     steps:
-      - checkout
-      - run: echo $SECRET_TEST
+      - run: echo $PRACTICE_VAR
 
 workflows:
   hello_and_hi:
     jobs:
       - say-hello
       - say-hi
-      - test-variable
+      - test-variable:
+          context:
+            - practice_context
